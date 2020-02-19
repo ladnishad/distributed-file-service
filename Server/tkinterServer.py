@@ -1,7 +1,3 @@
-#Nishad Lad
-#1001633186
-
-
 import socket
 import threading
 import os,time
@@ -140,7 +136,7 @@ def client1Process(s):
     t.start()
 
     clientDirectoryStatus.config(text = "Watching client directories for new files.")
-    path_to_watch = "Lad_nnl3186/Client1"
+    path_to_watch = "path/Client1"
 
     #Constant list to maintain file names in the directory of first client in the initial stage
     before = dict ([(f, None) for f in os.listdir (path_to_watch)])
@@ -159,8 +155,8 @@ def client1Process(s):
           #Cleaning the filename
           clientFileName = str(added).replace('[','').replace(']','').replace("'","")
 
-          sourceFile = 'Lad_nnl3186/Client1/'+clientFileName
-          dest = 'Lad_nnl3186/Server'
+          sourceFile = 'path/Client1/'+clientFileName
+          dest = 'path/Server'
           if os.path.isfile(str(added).replace('[','').replace(']','').replace("'","")):
               before = after
           else:
@@ -190,7 +186,7 @@ def client2Process(s):
     #Starting the thread
     t1.start()
 
-    path_to_watch2 = "Lad_nnl3186/Client2"
+    path_to_watch2 = "path/Client2"
 
     #Constant list to maintain file names in the directory of first client in the initial stage
     before1 = dict ([(f, None) for f in os.listdir (path_to_watch2)])
@@ -209,8 +205,8 @@ def client2Process(s):
           #Cleaning the filename
           clientFileName1 = str(added1).replace('[','').replace(']','').replace("'","")
 
-          sourceFile1 = 'Lad_nnl3186/Client2/'+clientFileName1
-          dest1 = 'Lad_nnl3186/Server'
+          sourceFile1 = 'path/Client2/'+clientFileName1
+          dest1 = 'path/Server'
           if os.path.isfile(str(added1).replace('[','').replace(']','').replace("'","")):
               before1 = after1
           else:
@@ -241,7 +237,7 @@ def client3Process(s):
     #Starting the thread
     t2.start()
 
-    path_to_watch3 = "Lad_nnl3186/Client3"
+    path_to_watch3 = "path/Client3"
 
     #Constant list to maintain file names in the directory of first client in the initial stage
     before2 = dict ([(f, None) for f in os.listdir (path_to_watch3)])
@@ -260,8 +256,8 @@ def client3Process(s):
           #Cleaning the filename
           clientFileName2 = str(added2).replace('[','').replace(']','').replace("'","")
 
-          sourceFile2 = 'Lad_nnl3186/Client3/'+clientFileName2
-          dest2 = 'Lad_nnl3186/Server'
+          sourceFile2 = 'path/Client3/'+clientFileName2
+          dest2 = 'path/Server'
           if os.path.isfile(str(added2).replace('[','').replace(']','').replace("'","")):
               before2 = after2
           else:

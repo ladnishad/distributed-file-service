@@ -1,6 +1,3 @@
-#Nishad Lad
-#1001633186
-
 import socket
 import threading
 import os,time
@@ -42,7 +39,7 @@ def connectToServer():
     #Set connection status label
     ConnectionStatusLabel.config(text = "Connected to server.")
     #Server directory path
-    path_to_watch = "Lad_nnl3186/Server"
+    path_to_watch = "path/Server"
     #Dictionary to maintain initial state of server directory. it will contain names of files in the directory
     before = dict ([(f, None) for f in os.listdir (path_to_watch)])
     while 1:
@@ -84,7 +81,7 @@ def connectToServer():
 
         else:
             ServerStatus.config(text = "No change yet but files might have been removed.")
-            
+
 def startThread():
     threading.Thread(target = connectToServer).start()
 

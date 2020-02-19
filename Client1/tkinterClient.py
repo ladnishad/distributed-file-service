@@ -1,6 +1,3 @@
-#Nishad Lad
-#1001633186
-
 import socket
 import threading
 import os,time
@@ -44,7 +41,7 @@ def connectToServer():
     ConnectionStatusLabel.config(text = "Connected to server.")
 
     #Server directory path
-    path_to_watch = "Lad_nnl3186/Server"
+    path_to_watch = "path/Server"
     #Dictionary to maintain initial state of server directory. it will contain names of files in the directory
     before = dict ([(f, None) for f in os.listdir (path_to_watch)])
     while 1:
@@ -65,7 +62,7 @@ def connectToServer():
             #Else download file
             else:
                 ServerStatus.config(text = "Server added file: "+str(added).replace('[','').replace(']','').replace("'",""))
-                
+
                 filename = str(added).replace('[','').replace(']','').replace("'","")
                 #Send the filename to the server
                 s.send(bytes(filename,encoding='utf-8'))
